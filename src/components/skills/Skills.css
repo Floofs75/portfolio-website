@@ -1,0 +1,138 @@
+.skillsSection {
+    background: linear-gradient(
+        to bottom,
+        black 0%,
+        #02e8fd 50%,
+        black 100%
+    );
+    
+    height: 200vh;
+    overflow: auto;
+}
+
+.skillsHeadings{
+    text-align: center;
+    font-size: larger;
+    color: white;
+}
+
+.skillsCon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    max-width: 1100px;
+    margin: 0 auto;
+
+}
+
+.skillsImgWrap {
+    width: 100%;
+}
+
+.skillsImg {
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+.skillsContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.skillsItem {
+    position: relative;
+    padding-left: 200px;
+    padding-bottom: 5px;
+}
+
+skillsItem:not(:last-child)::after {
+    content: " ";
+    position: absolute;
+    left: 11px;
+    top: 30px;
+    width: 2px;
+    height: calc(100% -20px);
+    background-color: aqua;
+}
+
+.skillsTitle {
+    font-size: large;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+}
+
+.skillsDesc {
+    margin-top: 1px;
+    color: white;
+    line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+    .skillsCon {
+        flex-direction: row;
+    }
+    .skillsImgWrap,
+    .skillsContent {
+        width: 50%;
+    }
+}
+
+.qualiSection {
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 100%;
+    padding: 5px;
+}
+
+.qualiHeading {
+    font-size: xx-large;
+    text-align: center;
+    margin-bottom: 100px;
+    color: black;
+}
+
+.qualiGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+}
+
+.qualiCard {
+    background: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
+.qualiName {
+    font-size: medium;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+.qualiImg {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    margin: 0 auto;
+    display: block;
+}
+
+.qualiTitle {
+    font-size: medium;
+    font-style: italic;
+}
+
+@media (min-width: 768px) {
+    .qualiGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
