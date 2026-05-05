@@ -3,11 +3,12 @@
     background: linear-gradient(
         to bottom,
         black 0%,
-        #d302fd 50%,
+        #00d0f5 50%,
         black 100%
         
     );
     height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .projectHeading{
@@ -52,7 +53,6 @@
   object-fit: cover; 
 }
 
-/* Content Padding & Typography */
 .projectName {
   font-size: 1.5rem;
   margin: 1rem;

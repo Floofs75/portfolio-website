@@ -11,6 +11,7 @@
     align-items: center;
     justify-content: center;
     padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .contact-wrapper{
@@ -21,13 +22,13 @@
 
 .contact-heading{
     font-size: 3rem;
-    color: #22cacd;
+    color: #000000;
     margin-bottom: 1rem;
 }
 
 .contact-tagline{
     font-size: 1.2rem;
-    color: #73a5d8;
+    color: #000000;
     max-width: 700px;
     margin: 0 auto 3rem auto;
 }
