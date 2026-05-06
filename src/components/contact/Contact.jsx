@@ -1,8 +1,38 @@
 import './Contact.css';
-import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope} from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaInstagram} from 'react-icons/fa';
+import React, { useState } from 'react';
+import { useEffect } from 'react';
 
 
 function Contact() {
+
+        const initialState = {
+
+            name: '',
+            email: '',
+            message: ''
+
+        };
+        
+        const [formInput, setFormInput] = useState(initialState);
+
+        const handleChange = (e) => {
+            const {name, value} = e.target;
+            setFormInput({...formInput,
+                [name] : value
+            });
+        };
+
+        const handleSubmit = (e) => {
+            e.preventDefault();
+            console.log('Message sent', formInput)
+
+            setFormInput(initialState);
+            alert("Message sent.")
+        }
+    
+        
+
     return(
         <div className="contact-page">
             <div className="contact-wrapper">
@@ -13,7 +43,47 @@ function Contact() {
                     </p>
                 </header>
 
+                <div className='formCon'>
+
+                    <form onSubmit={handleSubmit}>
+                    <div className='formGroup'>
+                        <label>Name:</label>
+                        <input 
+                            type="text"
+                            name="name"
+                            value={formInput.name}
+                            onChange={handleChange} 
+                        />
+                    </div>
+
+                    <div className='formGroup'>
+                        <label>E-mail:</label>
+                        <input 
+                            type="email"
+                            name="email"
+                            value={formInput.email}
+                            onChange={handleChange} 
+                        />
+                    </div>
+
+                    <div className='formGroup'>
+                        <label>Message:</label>
+                        <textarea
+                            name="message"
+                            value={formInput.message}
+                            onChange={handleChange}
+                        />
+                    </div>
+
+                    <button className='btnSubmit' type="submit">Send Message</button>
+
+                </form>
+
+                </div>
+                
+
                 <section className="contact-methods">
+                    
                     <div className="contact-grid">
                         <a href="https://www.linkedin.com/in/didintke-mafoko-173845363" target="_blank" rel="noreferrer" className="method-card">
                             <FaLinkedin className="icon" />
@@ -32,12 +102,7 @@ function Contact() {
                             <h3>Personal Interests</h3>
                             <p>A glimps into my creative inspiration and hobbies. </p>
                         </a>
-
-                        <a href="mailto:didintle_mafoko@gmail.com" target="_blank" rel="noreferrer" className="method-card">
-                            <FaEnvelope className="icon"/>
-                            <h3>Direct Inquiry</h3>
-                            <p>Send a message straight to my inbox. </p>
-                        </a>   
+   
                     </div>
                 </section>
             </div>

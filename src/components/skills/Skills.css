@@ -125,6 +125,7 @@ skillsItem:not(:last-child)::after {
     border-radius: 8px;
     margin: 0 auto;
     display: block;
+    object-fit: contain;
 }
 
 .qualiTitle {
