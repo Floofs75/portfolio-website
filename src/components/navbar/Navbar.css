@@ -1,0 +1,28 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1075;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: white;
+}
+
+.pageLinks {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.pageLinks a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.pageLinks a:hover {
+    color: lightblue;
+}
+
