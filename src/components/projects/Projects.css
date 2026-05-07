@@ -1,34 +1,29 @@
 .projectSection {
-    background: linear-gradient(
-        to bottom,
-        black 0%,
-        #00d0f5 50%,
-        black 100%
-    );
-    /* Changed to min-height to allow content to grow on mobile */
-    min-height: 100vh;
+    background: linear-gradient(to bottom,
+     black 0%,
+      #00d0f5 50%,
+       black 100%
+       );
+       
+    min-height: 100vh; 
     width: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 8vh 5vw;
-    box-sizing: border-box;
+    padding: 10vh 5vw;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .projectHeading {
     color: white;
     text-align: center;
-    /* Responsive font size */
-    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-size: clamp(2.5rem, 7vw, 4rem);
     font-weight: 700;
-    margin-bottom: 3rem;
-    line-height: 1.1;
+    margin-bottom: 4rem;
 }
 
 .projectGrid {
     display: grid;
-    /* Automatically switches from 3 columns to 1 based on space */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2.5rem;
     width: 100%;
@@ -36,68 +31,38 @@
 }
 
 .projectCard {
-    background: rgba(255, 255, 255, 0.05); /* Subtle dark card feel */
-    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 15px;
-    padding: 1.5rem;
-    transition: transform 0.3s ease, border-color 0.3s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 2rem;
     text-align: center;
+    transition: transform 0.3s ease;
 }
 
 .projectCard:hover {
     transform: translateY(-10px);
-    border-color: #00d0f5;
 }
 
-.projectName {
-    color: white;
-    font-size: 1.5rem;
-    margin: 0 0 0.5rem 0;
-}
-
-.projectDesc {
-    color: black;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin-bottom: 1.5rem;
-    min-height: 3rem; /* Keeps cards aligned even with different text lengths */
-}
-
-.projectImgContainer {
+.projectImgWrap {
     width: 100%;
-    border-radius: 8px;
-    overflow: hidden;
     aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-top: 1rem;
 }
 
 .projectImg {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
 }
 
-.projectCard:hover .projectImg {
-    transform: scale(1.05);
-}
-
-/* Mobile specific fixes */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     .projectSection {
-        padding: 10vh 1rem;
+        padding: 8vh 1.5rem;
     }
     
     .projectGrid {
-        /* Force single column and smaller gap on small phones */
         grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .projectHeading {
-        margin-bottom: 2rem;
     }
 }

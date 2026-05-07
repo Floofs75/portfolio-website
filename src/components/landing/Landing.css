@@ -5,7 +5,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* Dark overlay helps white text pop against the photo */
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
               url(me.jpg);
   background-size: cover;
@@ -18,7 +17,7 @@
 
 .landingHeader {
   text-align: center;
-  margin-bottom: 4vh; /* Relative to viewport height */
+  margin-bottom: 4vh;
 }
 
 .landingHeader h1 {
@@ -30,13 +29,13 @@
 
 .landingHeader h1 strong {
   font-weight: 800;
-  display: block; /* Puts name on a new line on smaller screens */
+  display: block; 
   margin-top: 0.5rem;
 }
 
 .cardLinks {
   display: flex;
-  flex-wrap: wrap; /* Allows cards to stack on mobile */
+  flex-wrap: wrap; 
   gap: 1.5rem;
   justify-content: center;
   width: 100%;
@@ -48,7 +47,6 @@
   color: #1a1a1a;
   padding: 1.5rem;
   border-radius: 12px;
-  /* Cards take full width on mobile, 1/3 on desktop */
   flex: 1 1 300px; 
   border: 1px solid rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -66,7 +64,7 @@
 
 .cardSymbol {
   font-size: 2rem;
-  color: #004666; /* Matching your About section blue */
+  color: #004666;
   margin-bottom: 0.5rem;
 }
 
@@ -83,7 +81,6 @@
   color: #444;
 }
 
-/* Mobile Tweak */
 @media (max-width: 600px) {
   .landingSection {
     justify-content: flex-start;
@@ -96,6 +93,6 @@
   
   .linkCards {
     padding: 1.2rem;
-    flex: 1 1 100%; /* Forces cards to stack vertically */
+    flex: 1 1 100%;
   }
 }

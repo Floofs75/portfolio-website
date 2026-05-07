@@ -12,7 +12,6 @@
     justify-content: flex-start;
     min-height: 100vh;
     width: 100%;
-    /* Dynamic padding: 8% of screen height, 5% of screen width */
     padding: 8vh 5vw;
     box-sizing: border-box;
     text-align: center;
@@ -26,7 +25,6 @@
 
 .aboutHeading {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* Scales between 2.2rem and 3.5rem based on screen width */
     font-size: clamp(2.2rem, 8vw, 3.5rem);
     font-weight: 500;
     line-height: 1.2;
@@ -43,7 +41,6 @@
     max-width: 650px;
     display: flex;
     flex-direction: column;
-    /* Adds consistent spacing between items without extra margins */
     gap: 3.5rem;
 }
 
@@ -51,9 +48,10 @@
     font-family: Arial, 'Helvetica Neue', sans-serif;
     font-size: clamp(1.1rem, 4vw, 1.3rem);
     font-weight: 600;
-    color: black;
+    color: white;
     margin: 0 0 1rem 0;
     text-transform: uppercase;
+    text-decoration: underline;
 }
 
 .aboutContent p {
@@ -65,10 +63,8 @@
     margin: 0;
 }
 
-/* Mobile-specific adjustments */
 @media (max-width: 480px) {
     .aboutSection {
-        /* Slightly more horizontal room on very small phones */
         padding: 10vh 1.2rem;
     }
     
