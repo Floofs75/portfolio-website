@@ -1,78 +1,57 @@
-import './Skills.css';
 import React from 'react';
-import skillsImg from './me2.jpg'
-import quali1 from './nhhs.jpg'
-import quali2 from './bc.png'
-import quali3 from './googleskills.png'
+import './Skills.css';
+import bcLogo from './bc.png';
+import googleSkills from './googleskills.png';
+import nhhsLogo from './nhhs.jpg';
+import svcLogo from './svc.png';
 
 function Skills() {
-
-    const skillsList = [
-        { title: "Familiarity with computers", desc: "Being on a computer most of my life has given me experience in the Microsoft Office Suite, Google collection and various software tools."},
-        { title: "Sociable", desc: "I get along with anyone, from any background or demographic. I love interacting with others and I am great at it too."},
-        { title: "Thorough", desc: "'If I must do something, be the best' - Chamber, Valorant"},
-        { title: "Flexible", desc: "My speciality lies in adaptibility. Life is not a linear path, so I know multiple."}
-    ];
-
-    const qualiList = [
-        {name: "Norman Henshillwood Highschool", image: quali1, qualifications: "Bachlors Pass"},
-        {name: "Belgium Campus iTversity", image: quali2, qualifications: "3rd Year Diploma of Information Technology Student"},
-        {name: "Google Skills", image: quali3, qualifications: "Google Workspace Certificate"}
-    ];
-
-        
-
-    return(
-
-        <section className='skillsSection' id='skills'>
-
-            <div className="skillsHeadings">
-                <h1 className='skillsHead'><strong>My Skills</strong></h1>
-                <h2 className='skillsSub'>What do I bring to the table?</h2>
-            </div>
-            
-
-            <div className='skillsCon'>
-                        
-                <div className='skillsImgWrap'>
-                    <img src={skillsImg} alt='placeholder1' className='skillsImg'/>
-                </div>
-
-                <div className="skillsContent">
-                    {skillsList.map((skill, index) => (
-                        <div key={index} className='skillsItem'>
-                            <hr/>
-                            <h3 className='skillsTitle'>{skill.title}</h3>
-                            <p className='skillsDesc'>{skill.desc}</p>
-                            <hr/>
+    return (
+        <section className="skillsSection" id="skills">
+            <div className="skillsContainer">
+                <h1 className="sectionHeading">Education & Certifications</h1>
+                
+                <div className="educationGrid">
+                    <div className="educationCard">
+                        <img src={bcLogo} alt="Belgium Campus" className="cardImage" />
+                        <div className="cardBody">
+                            <h3>Belgium Campus ITversity</h3>
+                            <p className="cardSubtext">Bachelor of Computing (3rd Year)</p>
+                            <p>Specializing in Software Engineering with a focus on full-stack development.</p>
                         </div>
-                    ))}
+                    </div>
+
+                    <div className="educationCard">
+                        <img src={nhhsLogo} alt="NHHS" className="cardImage" />
+                        <div className="cardBody">
+                            <h3>Norman Henshilwood High School</h3>
+                            <p className="cardSubtext">Matriculated</p>
+                            <p>Completed secondary education with a focus on technical subjects.</p>
+                        </div>
+                    </div>
+
+                    <div className="educationCard">
+                        <img src={googleSkills} alt="Google Skills" className="cardImage" />
+                        <div className="cardBody">
+                            <h3>Google Digital Garage</h3>
+                            <p className="cardSubtext">Certification</p>
+                            <p>Foundations of Digital Marketing and user-centric design principles.</p>
+                        </div>
+                    </div>
                 </div>
 
+                <h1 className="sectionHeading">Technical Expertise</h1>
+                <div className="skillsGrid">
+                    <div className="skillTag">React</div>
+                    <div className="skillTag">JavaScript</div>
+                    <div className="skillTag">Node.js</div>
+                    <div className="skillTag">Python</div>
+                    <div className="skillTag">C# / .NET</div>
+                    <div className="skillTag">SQL</div>
+                </div>
             </div>
-
-
-            <section className='qualiSection'>
-
-            <h2 className='qualiHeading'>My Qualifications</h2>
-            <div className='qualiGrid'>
-                {qualiList.map((item, index) => (
-                    <div className='qualiCard' key={index} >
-                        <h3 className='qualiName'>{item.name}</h3>
-                        <img className='qualiImg' src={item.image} alt={item.name}/>
-                        <p className='qualiTitle'>{item.qualifications}</p>
-                    </div>
-                ))}
-            </div>
-
-            </section>
-        
         </section>
-        
-        
-        
-    )
-    
-};
+    );
+}
 
 export default Skills;

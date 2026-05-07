@@ -1,28 +1,70 @@
 .navbar {
     position: sticky;
     top: 0;
+    /* High z-index ensures it stays above the Landing and About backgrounds */
     z-index: 1075;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background-color: #333;
+    /* Uses viewport width for horizontal padding to keep it proportional */
+    padding: 1rem 5vw;
+    background-color: #1a1a1a; /* Slightly deeper than #333 for a premium feel */
     color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navName {
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    /* Prevents the name from shrinking too much */
+    flex-shrink: 0;
 }
 
 .pageLinks {
     display: flex;
     list-style: none;
-    gap: 20px;
+    /* rem is better for accessibility than px */
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
 }
 
 .pageLinks a {
     color: white;
     text-decoration: none;
-    transition: color 0.3s;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+    font-weight: 500;
 }
 
 .pageLinks a:hover {
-    color: lightblue;
+    color: #00d0f5; /* Matching your About section cyan */
 }
 
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .pageLinks {
+        gap: 1rem;
+        /* Smaller font size for mobile to prevent wrapping issues */
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pageLinks {
+        /* On very small phones, we stack the links or reduce gap further */
+        gap: 0.8rem;
+    }
+    
+    .pageLinks a {
+        font-size: 0.8rem;
+    }
+}

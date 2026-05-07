@@ -1,140 +1,102 @@
 .skillsSection {
-    background: linear-gradient(
-        to bottom,
-        black 0%,
-        #ffffff 50%,
-        black 100%
-    );
-    
-    height: 200vh;
-    overflow: auto;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000;
+    color: white;
+    padding: 10vh 5vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 
-.skillsHeadings{
+.skillsContainer {
+    width: 100%;
+    max-width: 1100px;
+}
+
+.sectionHeading {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 3rem;
     text-align: center;
-    font-size: larger;
+    color: #00d0f5;
+}
+
+/* Responsive Grid using auto-fit */
+.educationGrid {
+    display: grid;
+    /* This creates as many 280px columns as possible */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+
+.educationCard {
+    background: #1a1a1a;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+}
+
+.educationCard:hover {
+    transform: translateY(-10px);
+    border-color: #00d0f5;
+}
+
+.cardImage {
+    width: 100%;
+    height: 180px;
+    object-fit: contain; /* Ensures logos don't stretch weirdly */
+    background: white; /* Good for logos with transparent backgrounds */
+}
+
+.cardBody {
+    padding: 1.5rem;
+}
+
+.cardBody h3 {
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem 0;
     color: white;
 }
 
-.skillsCon {
+.cardSubtext {
+    color: #00d0f5;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+/* Skills Tags Layout */
+.skillsGrid {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    max-width: 1100px;
-    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
 }
 
-.skillsImgWrap {
-    width: 100%;
+.skillTag {
+    background: #004666;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: background 0.3s;
 }
 
-.skillsImg {
-    width: 100%;
-    border-radius: 3px;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    object-fit: cover;
-}
-
-.skillsContent {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.skillsItem {
-    position: relative;
-    padding-left: 200px;
-    padding-bottom: 5px;
-}
-
-skillsItem:not(:last-child)::after {
-    content: " ";
-    position: absolute;
-    left: 11px;
-    top: 30px;
-    width: 2px;
-    height: calc(100% -20px);
-    background-color: rgb(0, 0, 0);
-}
-
-.skillsTitle {
-    font-size: large;
-    font-weight: 700;
-    color: rgb(0, 0, 0);
-    margin: 0;
-}
-
-.skillsDesc {
-    margin-top: 1px;
-    color: rgb(0, 0, 0);
-    line-height: 1.5;
-}
-
-@media (min-width: 768px) {
-    .skillsCon {
-        flex-direction: row;
-    }
-    .skillsImgWrap,
-    .skillsContent {
-        width: 50%;
-    }
-}
-
-.qualiSection {
-    max-width: 1100px;
-    margin: 0 auto;
-    margin-top: 100px;
-    width: 100%;
-    padding: 5px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.qualiHeading {
-    font-size: xx-large;
-    text-align: center;
-    margin-bottom: 100px;
+.skillTag:hover {
+    background: #00d0f5;
     color: black;
 }
 
-.qualiGrid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 50px;
-}
-
-.qualiCard {
-    background: white;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 5px;
-    text-align: center;
-}
-
-.qualiName {
-    font-size: medium;
-    font-weight: 700;
-    margin-bottom: 3px;
-}
-
-.qualiImg {
-    width: 100%;
-    max-width: 200px;
-    height: 200px;
-    border-radius: 8px;
-    margin: 0 auto;
-    display: block;
-    object-fit: contain;
-}
-
-.qualiTitle {
-    font-size: medium;
-    font-style: italic;
-}
-
-@media (min-width: 768px) {
-    .qualiGrid {
-        grid-template-columns: repeat(3, 1fr);
+/* Mobile Tweak for very small screens */
+@media (max-width: 480px) {
+    .educationGrid {
+        grid-template-columns: 1fr; /* Forces single column */
+    }
+    
+    .cardImage {
+        height: 150px;
     }
 }

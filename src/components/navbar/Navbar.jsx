@@ -1,21 +1,18 @@
 import React from 'react';
-import './Navbar.css'
+import './Navbar.css';
 
 const Navbar = () => {
-    
-    return(
+    return (
+        <nav className="navbar">
+            <div className="navName">Matthew van Schoor</div>
 
-        <nav className='navbar'>
-            <div className='navName'>Matthew van Schoor</div>
-
-            <ul className='pageLinks'>
+            <ul className="pageLinks">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills & Education</a></li>
                 <li><a href="#projects">Projects & Contact</a></li>
             </ul>
-
         </nav>
-    )
+    );
 }
 
 export default Navbar;
