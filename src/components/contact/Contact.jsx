@@ -1,7 +1,6 @@
 import './Contact.css';
 import { FaLinkedin, FaGithub, FaInstagram} from 'react-icons/fa';
 import React, { useState } from 'react';
-import { useEffect } from 'react';
 
 
 function Contact() {
@@ -85,19 +84,19 @@ function Contact() {
                 <section className="contact-methods">
                     
                     <div className="contact-grid">
-                        <a href="https://www.linkedin.com/in/didintke-mafoko-173845363" target="_blank" rel="noreferrer" className="method-card">
+                        <a href="www.linkedin.com/in/matthew-van-schoor-za75" target="_blank" rel="noreferrer" className="method-card">
                             <FaLinkedin className="icon" />
                             <h3>Professional Network</h3>
                             <p>View my career journey and endorsements.</p>
                         </a>
 
-                        <a href="https://github.com/Didi-ntle" target="_blank" rel="noreferrer" className="method-card">
+                        <a href="https://github.com/Floofs75" target="_blank" rel="noreferrer" className="method-card">
                             <FaGithub className="icon"/>
                             <h3>Technical Repository</h3>
                             <p>Explore my source code and latest builds. </p>
                         </a> 
 
-                        <a href="https://www.instagram.com/didintlemafoko" target="_blank" rel="noreferrer" className="method-card">
+                        <a href="https://www.instagram.com/spooky_valentino/" target="_blank" rel="noreferrer" className="method-card">
                             <FaInstagram className="icon"/>
                             <h3>Personal Interests</h3>
                             <p>A glimps into my creative inspiration and hobbies. </p>
