@@ -96,3 +96,39 @@
         height: 150px;
     }
 }
+
+.downloadContainer {
+    margin-top: 3.5rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.downloadBtn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #00d0f5;
+    color: #000;
+    padding: 0.9rem 2.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 208, 245, 0.2);
+}
+
+.downloadBtn:hover {
+    background-color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 208, 245, 0.4);
+}
+
+@media (max-width: 480px) {
+    .downloadBtn {
+        width: 90%;
+        justify-content: center;
+        font-size: 1rem;
+    }
+}

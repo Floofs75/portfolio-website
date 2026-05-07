@@ -3,7 +3,7 @@ import './Skills.css';
 import bcLogo from './bc.png';
 import googleSkills from './googleskills.png';
 import nhhsLogo from './nhhs.jpg';
-import svcLogo from './svc.png';
+import myCvFile from './Curriculum Vitae of Matthew van Schoor.pdf';
 
 function Skills() {
     return (
@@ -49,6 +49,15 @@ function Skills() {
                     <div className="skillTag">C# / .NET</div>
                     <div className="skillTag">SQL</div>
                 </div>
+
+                <div className="downloadContainer">
+                    <a 
+                        href={myCvFile} 
+                        download="Curriculum Vitae of Matthew van Schoor.pdf" 
+                        className="downloadBtn"
+                    >Download My CV</a>
+                </div>
+
             </div>
         </section>
     );
