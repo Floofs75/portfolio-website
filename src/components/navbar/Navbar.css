@@ -17,6 +17,7 @@
     font-size: 1.1rem;
     letter-spacing: 0.5px;
     flex-shrink: 0;
+    text-decoration: none;
 }
 
 .pageLinks {
