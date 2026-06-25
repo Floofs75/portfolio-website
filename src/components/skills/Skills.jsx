@@ -17,7 +17,7 @@ function Skills() {
                         <div className="cardBody">
                             <h3>Belgium Campus ITversity</h3>
                             <p className="cardSubtext">Bachelor of Computing (3rd Year)</p>
-                            <p>Specializing in Software Engineering with a focus on full-stack development.</p>
+                            <p>Specializing in Software Engineering and Web Development with a focus on full-stack development.</p>
                         </div>
                     </div>
 
@@ -26,7 +26,7 @@ function Skills() {
                         <div className="cardBody">
                             <h3>Norman Henshilwood High School</h3>
                             <p className="cardSubtext">Matriculated</p>
-                            <p>Completed secondary education with a focus on technical subjects.</p>
+                            <p>Completed secondary education with a specialization in Business Studies, Computer Application Technology and Physics.</p>
                         </div>
                     </div>
 

@@ -84,7 +84,7 @@
 @media (max-width: 600px) {
   .landingSection {
     justify-content: flex-start;
-    padding-top: 10vh;
+    padding-top: 20vh;
   }
   
   .cardLinks {
