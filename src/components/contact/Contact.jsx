@@ -41,7 +41,7 @@ function Contact() {
 
             if (data.success) {
                 setSubmissionStatus('Message sent successfully!');
-                setFormInput(initialState); // Clear form fields
+                setFormInput(initialState);
                 alert("Message sent successfully.");
             } else {
                 setSubmissionStatus('Failed to send message.');
@@ -73,7 +73,7 @@ function Contact() {
                                 name="name"
                                 value={formInput.name}
                                 onChange={handleChange} 
-                                required // Good practice to ensure field isn't empty
+                                required
                             />
                         </div>
 

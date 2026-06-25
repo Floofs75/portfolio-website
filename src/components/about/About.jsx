@@ -23,7 +23,7 @@ function About() {
                 <article className="aboutContent">
                     <h2>A competitor offline and online</h2>
                     <p>
-                        From competing in Valorant as an In-Game Leader for SIN E-sports,
+                        From competing in Valorant for Exiled Core E-Sports,
                         to competing in the Pokemon Video Game Championships format, to
                         playing semi-professional paintball in the past, I embrace 
                         competition and the need to improve for the sake of being the best.
